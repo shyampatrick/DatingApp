@@ -14,24 +14,24 @@ namespace DatingApp.API.Controllers
 {
   [Route("api/[controller]")]
   [ApiController]
+  /*
+
+        o                        o       o         
+       <|>                      <|>     <|>        
+       / \                      < >     / >        
+     o/   \o        o       o    |      \o__ __o   
+    <|__ __|>      <|>     <|>   o__/_   |     v\  
+    /       \      < >     < >   |      / \     <\ 
+  o/         \o     |       |    |      \o/     o/ 
+ /v           v\    o       o    o       |     <|  
+/>             <\   <\__ __/>    <\__   / \    / \ 
+
+
+
+
+*/
   public class AuthController : ControllerBase
   {
-    /*
- 
-          o                        o       o         
-         <|>                      <|>     <|>        
-         / \                      < >     / >        
-       o/   \o        o       o    |      \o__ __o   
-      <|__ __|>      <|>     <|>   o__/_   |     v\  
-      /       \      < >     < >   |      / \     <\ 
-    o/         \o     |       |    |      \o/     o/ 
-   /v           v\    o       o    o       |     <|  
-  />             <\   <\__ __/>    <\__   / \    / \ 
-                                                     
-                                                     
-                                                     
- 
-*/
     private readonly IAuthRepository _repo;
     private readonly IConfiguration _config;
 
@@ -90,9 +90,9 @@ namespace DatingApp.API.Controllers
 
       var claims = new[]
       {
-        new Claim(ClaimTypes.NameIdentifier, userFromRepo.id.ToString()),
-        new Claim(ClaimTypes.Name, userFromRepo.Username)
-      };
+          new Claim(ClaimTypes.NameIdentifier, userFromRepo.id.ToString()),
+          new Claim(ClaimTypes.Name, userFromRepo.Username)
+        };
 
       var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config.GetSection("AppSettings:Token").Value));
 
@@ -113,6 +113,8 @@ namespace DatingApp.API.Controllers
       {
         token = tokenHandler.WriteToken(token)
       });
+
     }
+
   }
 }
