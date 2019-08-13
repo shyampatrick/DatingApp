@@ -25,10 +25,14 @@ export class NavComponent implements OnInit {
         this.alertify.success('Logged In Successfully');
       },
       error => {
+<<<<<<< HEAD
         this.alertify.error(error);
       },
       () => {
         this.router.navigate(['/members']);
+=======
+        console.log(error);
+>>>>>>> e9147c75b2d3258c15a0e531c38684ca80928f71
       }
     );
   }
