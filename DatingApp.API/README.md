@@ -1,1 +1,1 @@
-// TODO Upgrade to ASP .NET Core 3, Automapper, EF Seeding
+// TODO Upgrade to ASP .NET Core 3, Automapper, EF Seeding, Cloudinary
