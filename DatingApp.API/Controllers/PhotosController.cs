@@ -1,4 +1,6 @@
+using System.Threading.Tasks;
 using AutoMapper;
+using CloudinaryDotNet;
 using DatingApp.API.Data;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -14,6 +16,7 @@ namespace DatingApp.API.Controllers
     private readonly IDatingRepository _repo;
     private readonly IMapper _mapper;
     private readonly IOptions<CloudinarySettings> _cloudinaryConfig;
+    private Cloudinary _cloudinary;
 
     public PhotosController(
         IDatingRepository repo,
@@ -24,6 +27,24 @@ namespace DatingApp.API.Controllers
       _repo = repo;
       _mapper = mapper;
       _cloudinaryConfig = cloudinaryConfig;
+
+      Account acc = new Account(
+        _cloudinaryConfig.Value.CloudName,
+        _cloudinaryConfig.Value.ApiKey,
+        _cloudinaryConfig.Value.ApiSecret
+      );
+
+      _cloudinary = new Cloudinary(acc);
     }
+
+    [HttpPost]
+    public async Task<IActionResult> AddPhotoForUser(
+        int userId,
+        PhotoForCreationDto photoForCreationDto
+    )
+    {
+
+    }
+
   }
 }
