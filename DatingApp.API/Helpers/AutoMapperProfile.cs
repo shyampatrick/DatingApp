@@ -40,7 +40,7 @@ namespace DatingApp
 
       CreateMap<Photo, PhotoForReturnDto>();
 
-      CreateMap<Photo, PhotoForCreationDto>();
+      CreateMap<PhotoForCreationDto, Photo>();
 
     }
 
