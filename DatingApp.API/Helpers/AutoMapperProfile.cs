@@ -42,6 +42,8 @@ namespace DatingApp
 
       CreateMap<PhotoForCreationDto, Photo>();
 
+      CreateMap<UserForRegisterDto, User>();
+
     }
 
   }
