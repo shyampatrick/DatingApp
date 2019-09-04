@@ -7,7 +7,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {
   BsDropdownModule,
   TabsModule,
-  BsDatepickerModule
+  BsDatepickerModule,
+  PaginationModule,
+  ButtonsModule
 } from 'ngx-bootstrap';
 import { JwtModule } from '@auth0/angular-jwt';
 import { NgxGalleryModule } from 'ngx-gallery';
@@ -67,6 +69,8 @@ export function tokenGetter() {
     BsDropdownModule.forRoot(),
     BsDatepickerModule.forRoot(),
     TabsModule.forRoot(),
+    PaginationModule.forRoot(),
+    ButtonsModule.forRoot(),
     RouterModule.forRoot(appRoutes),
     JwtModule.forRoot({
       config: {
