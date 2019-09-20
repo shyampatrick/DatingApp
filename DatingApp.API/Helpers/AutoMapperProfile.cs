@@ -21,7 +21,7 @@ namespace DatingApp
         })
         .ForMember(dest => dest.Age, opt =>
         {
-          opt.ResolveUsing(d => d.DateOfBirth.CalculateAge());
+          opt.MapFrom(d => d.DateOfBirth.CalculateAge());
         });
 
       CreateMap<User, UserForListDto>()
@@ -31,7 +31,7 @@ namespace DatingApp
         })
         .ForMember(dest => dest.Age, opt =>
         {
-          opt.ResolveUsing(d => d.DateOfBirth.CalculateAge());
+          opt.MapFrom(d => d.DateOfBirth.CalculateAge());
         });
 
       CreateMap<Photo, PhotosForDetailedDto>();

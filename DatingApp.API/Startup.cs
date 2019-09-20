@@ -49,7 +49,7 @@ namespace DatingApp.API
                 };
               });
 
-      services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1)
+      services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2)
               .AddJsonOptions(opt =>
               {
                 opt.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
@@ -58,7 +58,7 @@ namespace DatingApp.API
       services.AddDbContext<DataContext>(x => x.UseSqlite(Configuration.GetConnectionString("DefaultConnection")));
       services.AddScoped<IAuthRepository, AuthRepository>();
       services.AddScoped<IDatingRepository, DatingRepository>();
-      services.AddAutoMapper();
+      services.AddAutoMapper(typeof(DatingRepository).Assembly);
 
       services.Configure<CloudinarySettings>(Configuration.GetSection("CloudinarySettings"));
 
@@ -68,7 +68,7 @@ namespace DatingApp.API
     }
 
     // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-    public void Configure(IApplicationBuilder app, IHostingEnvironment env, Seed seeder)
+    public void Configure(IApplicationBuilder app, IHostingEnvironment env)
     {
       if (env.IsDevelopment())
       {
