@@ -17,7 +17,7 @@ import { TabsetComponent } from 'ngx-bootstrap';
 })
 export class MemberDetailComponent implements OnInit {
   // NOTE Angular 8 update: second argument to ViewChild: {static: true} : 2:22 Adding Query Params to Angular Route
-  @ViewChild('memberTabs') memberTabs: TabsetComponent;
+  @ViewChild('memberTabs', { static: true }) memberTabs: TabsetComponent;
   user: User;
   galleryOptions: NgxGalleryOptions[];
   galleryImages: NgxGalleryImage[];

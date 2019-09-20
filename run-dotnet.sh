@@ -1,1 +1,1 @@
-dotnet run --watch --project ./DatingApp.API/DatingApp.API.csproj
+dotnet watch run --project ./DatingApp.API/DatingApp.API.csproj
