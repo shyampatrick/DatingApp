@@ -55,7 +55,7 @@ namespace DatingApp.API.Data
                                 .AsQueryable();
 
       users = users.Where(u => u.id != userParams.UserId);
-      users = users.Where(u => u.Gender == userParams.Gender);
+      //users = users.Where(u => u.Gender == userParams.Gender);
 
       if (userParams.Likers)
       {

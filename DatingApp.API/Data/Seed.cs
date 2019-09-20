@@ -9,8 +9,6 @@ namespace DatingApp.API.Data
 {
   public class Seed
   {
-    private readonly DataContext _context;
-
     public static void SeedUsers(DataContext context)
     {
       if (!context.Users.Any())

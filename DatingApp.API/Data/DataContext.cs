@@ -21,6 +21,9 @@ namespace DatingApp.API.Data
 
     protected override void OnModelCreating(ModelBuilder builder)
     {
+      builder.Entity<User>()
+        .HasIndex(u => u.id);
+
       builder.Entity<Like>()
           .HasKey(k => new { k.LikerId, k.LikeeId });
 

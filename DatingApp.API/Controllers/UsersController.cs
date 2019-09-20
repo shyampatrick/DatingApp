@@ -35,13 +35,13 @@ namespace DatingApp
       var currentUserId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value);
       var userFromRepo = await _repo.GetUser(currentUserId);
       userParams.UserId = currentUserId;
-
       if (string.IsNullOrEmpty(userParams.Gender))
       {
         userParams.Gender = (userFromRepo.Gender == "male" ? "female" : "male");
       }
 
       var users = await _repo.GetUsers(userParams);
+      System.Console.WriteLine($"INFO {users.Count} {userParams.Gender}");
       var usersToReturn = _mapper.Map<IEnumerable<UserForListDto>>(users);
 
       Response.AddPagination(users.CurrentPage, users.PageSize,
