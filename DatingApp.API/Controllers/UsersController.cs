@@ -41,7 +41,6 @@ namespace DatingApp
       }
 
       var users = await _repo.GetUsers(userParams);
-      System.Console.WriteLine($"INFO {users.Count} {userParams.Gender}");
       var usersToReturn = _mapper.Map<IEnumerable<UserForListDto>>(users);
 
       Response.AddPagination(users.CurrentPage, users.PageSize,
@@ -86,7 +85,7 @@ namespace DatingApp
 
       if (like != null)
       {
-        BadRequest("You already like this user");
+        return BadRequest("You already like this user");
       }
 
       if (await _repo.GetUser(receipientId) == null)

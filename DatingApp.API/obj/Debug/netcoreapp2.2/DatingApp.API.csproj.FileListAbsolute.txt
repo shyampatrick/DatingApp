@@ -4,7 +4,6 @@ C:\Users\shyam\Repository\Code\DatingApp\DatingApp.API\bin\Debug\netcoreapp2.2\D
 C:\Users\shyam\Repository\Code\DatingApp\DatingApp.API\bin\Debug\netcoreapp2.2\DatingApp.API.dll
 C:\Users\shyam\Repository\Code\DatingApp\DatingApp.API\bin\Debug\netcoreapp2.2\DatingApp.API.pdb
 C:\Users\shyam\Repository\Code\DatingApp\DatingApp.API\obj\Debug\netcoreapp2.2\DatingApp.API.csprojAssemblyReference.cache
-C:\Users\shyam\Repository\Code\DatingApp\DatingApp.API\obj\Debug\netcoreapp2.2\DatingApp.API.csproj.CoreCompileInputs.cache
 C:\Users\shyam\Repository\Code\DatingApp\DatingApp.API\obj\Debug\netcoreapp2.2\DatingApp.API.RazorAssemblyInfo.cache
 C:\Users\shyam\Repository\Code\DatingApp\DatingApp.API\obj\Debug\netcoreapp2.2\DatingApp.API.RazorAssemblyInfo.cs
 C:\Users\shyam\Repository\Code\DatingApp\DatingApp.API\obj\Debug\netcoreapp2.2\DatingApp.API.AssemblyInfoInputs.cache
@@ -12,3 +11,7 @@ C:\Users\shyam\Repository\Code\DatingApp\DatingApp.API\obj\Debug\netcoreapp2.2\D
 C:\Users\shyam\Repository\Code\DatingApp\DatingApp.API\obj\Debug\netcoreapp2.2\DatingApp.API.RazorTargetAssemblyInfo.cache
 C:\Users\shyam\Repository\Code\DatingApp\DatingApp.API\obj\Debug\netcoreapp2.2\DatingApp.API.dll
 C:\Users\shyam\Repository\Code\DatingApp\DatingApp.API\obj\Debug\netcoreapp2.2\DatingApp.API.pdb
+c:\Users\shyam\Repository\Code\DatingApp\DatingApp.API\bin\Debug\netcoreapp2.2\appsettings.Development.json
+c:\Users\shyam\Repository\Code\DatingApp\DatingApp.API\bin\Debug\netcoreapp2.2\appsettings.json
+c:\Users\shyam\Repository\Code\DatingApp\DatingApp.API\bin\Debug\netcoreapp2.2\Data\UserSeedData.json
+c:\Users\shyam\Repository\Code\DatingApp\DatingApp.API\bin\Debug\netcoreapp2.2\Properties\launchSettings.json
