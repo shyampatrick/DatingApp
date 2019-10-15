@@ -35,7 +35,6 @@ namespace DatingApp
       var currentUserId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value);
       var userFromRepo = await _repo.GetUser(currentUserId);
       userParams.UserId = currentUserId;
-
       if (string.IsNullOrEmpty(userParams.Gender))
       {
         userParams.Gender = (userFromRepo.Gender == "male" ? "female" : "male");
@@ -86,7 +85,7 @@ namespace DatingApp
 
       if (like != null)
       {
-        BadRequest("You already like this user");
+        return BadRequest("You already like this user");
       }
 
       if (await _repo.GetUser(receipientId) == null)

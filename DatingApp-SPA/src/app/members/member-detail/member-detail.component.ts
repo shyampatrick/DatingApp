@@ -9,6 +9,7 @@ import {
   NgxGalleryAnimation
 } from 'ngx-gallery';
 import { TabsetComponent } from 'ngx-bootstrap';
+import { AuthService } from 'src/app/_services/auth.service';
 
 @Component({
   selector: 'app-member-detail',
@@ -17,7 +18,7 @@ import { TabsetComponent } from 'ngx-bootstrap';
 })
 export class MemberDetailComponent implements OnInit {
   // NOTE Angular 8 update: second argument to ViewChild: {static: true} : 2:22 Adding Query Params to Angular Route
-  @ViewChild('memberTabs') memberTabs: TabsetComponent;
+  @ViewChild('memberTabs', { static: true }) memberTabs: TabsetComponent;
   user: User;
   galleryOptions: NgxGalleryOptions[];
   galleryImages: NgxGalleryImage[];
@@ -25,7 +26,8 @@ export class MemberDetailComponent implements OnInit {
   constructor(
     private userService: UserService,
     private alertify: AlertifyService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private authService: AuthService
   ) {}
 
   ngOnInit() {
@@ -67,5 +69,18 @@ export class MemberDetailComponent implements OnInit {
 
   selectTab(tabId: number) {
     this.memberTabs.tabs[tabId].active = true;
+  }
+
+  sendLike(id: number) {
+    this.userService
+      .sendLike(this.authService.decodedToken.nameid, id)
+      .subscribe(
+        data => {
+          this.alertify.success('You have liked ' + this.user.knownAs);
+        },
+        error => {
+          this.alertify.error(error);
+        }
+      );
   }
 }
