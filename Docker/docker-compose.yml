@@ -1,0 +1,12 @@
+version: "3"
+services:
+    web:
+        build: .
+        ports:
+            - "8000:80"
+        depends_on:
+            - db
+    db:
+        image: "mysql"
+        environment:
+            MY_SQL_ROOT_PASSWORD: "my_secret_pw"
