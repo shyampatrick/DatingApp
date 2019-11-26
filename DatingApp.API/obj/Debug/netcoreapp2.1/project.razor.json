@@ -1,5 +1,5 @@
 {
-  "FilePath": "c:\\Users\\shyam\\Repository\\Code\\DatingApp\\DatingApp.API\\DatingApp.API.csproj",
+  "FilePath": "c:\\Users\\shyam\\Repository\\Code\\GitIgnoreFix\\DatingApp\\DatingApp.API\\DatingApp.API.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-2.1",
     "LanguageVersion": "2.1",
@@ -2872,7 +2872,7 @@
         }
       }
     ],
-    "CSharpLanguageVersion": 800
+    "CSharpLanguageVersion": 703
   },
   "RootNamespace": "DatingApp.API",
   "Documents": [],
