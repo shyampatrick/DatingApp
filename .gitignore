@@ -88,3 +88,6 @@ $RECYCLE.BIN/
 
 
 /DatingApp.API/.vscode
+/DatingApp.API/bin
+/DatingApp.API/obj
+DatingApp.API/obj/Debug/netcoreapp2.2/project.razor.json
