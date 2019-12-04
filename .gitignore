@@ -92,3 +92,4 @@ $RECYCLE.BIN/
 /DatingApp.API/obj
 DatingApp.API/obj/Debug/netcoreapp2.2/project.razor.json
 /cloudinary-apikey
+/DatingApp.Dist
