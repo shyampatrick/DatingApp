@@ -1,0 +1,7 @@
+FROM mcr.microsoft.com/dotnet/core/sdk:2.2
+RUN curl -sL https://deb.nodesource.com/setup_12.x | bash - &&  apt update && apt install -y nodejs && NODE_OPTIONS=--max-old-space-size=30720
+COPY . ./src
+EXPOSE 5000
+WORKDIR /src
+RUN dotnet publish "./DatingApp.API/DatingApp.API.csproj" -c Release -o /app
+ENTRYPOINT ["dotnet", "DatingApp.API.dll"]

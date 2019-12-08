@@ -1,3 +1,28 @@
-[![Board Status](https://dev.azure.com/shyampatrick/2ec8e0f2-adf9-4efe-b9d3-46a1a7400e24/313e2026-f131-4b9a-b603-199f9a59146a/_apis/work/boardbadge/0229fd3c-3130-4e7e-8b57-d33167388148)](https://dev.azure.com/shyampatrick/2ec8e0f2-adf9-4efe-b9d3-46a1a7400e24/_boards/board/t/313e2026-f131-4b9a-b603-199f9a59146a/Microsoft.RequirementCategory)
+# ASP.Net Core SPA Web API + Angular Demo
 
-https://dev.azure.com/shyampatrick/2ec8e0f2-adf9-4efe-b9d3-46a1a7400e24/313e2026-f131-4b9a-b603-199f9a59146a/_apis/work/boardbadge/0229fd3c-3130-4e7e-8b57-d33167388148
+## Dating App
+
+This is a demo app featuring a Full Stack Web API + Angular framework. It is pretty advanced and is derived from Coursework on Udemy. I really think it is a suitable demonstration of Web Developer skills and qualifications as I finished the course apart from the bonus + 3.0 update - which I'm going to be doing shortly.
+
+It is simple, has enough demonstrative qualities and is a good benchmark for describing intermediate skills in the above technologies.
+
+Dockerfiles included. Please don't hesitate to get in touch:
+
+shyampatrick@outlook.my (gitHub) || shyamkumarpatrick@gmail.com (professional) || sykron@gmail.com (old)
+
+_Currently, I have some complications with docker so please ignore the various dockerfiles in the repo - will be building app and placing it in DatingApp.Dist directory from which the prebuilt dockerfile can run without complications._
+
+Run:
+
+dotnet publish -c Release ./DatingApp.API -o ../DatingApp.Dist
+docker-compose up --build
+
+_This has a prebuilt step involved to get the App running in the container environment with a MySQL server_
+
+### _But I feel the best solution is to just run with the dev sqlite without the publish step - until I fix it - seems to be mostly to do with Docker networking and hosts_
+
+dotnet run
+&&
+ng serve
+
+_This works 100%_

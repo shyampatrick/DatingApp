@@ -33,4 +33,10 @@
     </ItemGroup>
   </Target>
 
+  <ItemGroup>
+    <Content Update="wwwroot;Views;appsettings.json;web.config;hosting.json">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
 </Project>
